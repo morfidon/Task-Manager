@@ -11,3 +11,4 @@ public class UserController
         return "Here is a list of users of our application";
     }
 }
+//MODEL - SHAPE, FORMULA - DATA - MVC - Model View Controller - VIEW - REACT - VUE -
