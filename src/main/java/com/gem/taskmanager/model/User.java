@@ -1,7 +1,13 @@
 package com.gem.taskmanager.model;
 
+import jakarta.persistence.*;
+
+@Entity
+//@Table(name = "users")
 public class User
 {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // IDentificator - UNIQUE - IDENTIFY
     private String name;
     private String email;
@@ -49,3 +55,4 @@ public class User
         this.password = password;
     }
 }
+//JPA - this things give you ADNOTATIONS, HIBERNATE
