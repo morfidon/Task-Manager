@@ -3,7 +3,7 @@ package com.gem.taskmanager.model;
 import jakarta.persistence.*;
 
 @Entity
-//@Table(name = "users")
+@Table(name = "users")
 public class User
 {
     @Id
