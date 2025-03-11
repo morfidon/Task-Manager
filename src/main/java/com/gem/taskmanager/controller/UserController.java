@@ -4,6 +4,8 @@ import com.gem.taskmanager.model.User;
 import com.gem.taskmanager.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -24,6 +26,13 @@ public class UserController
     {
         return userRepository.findAll();
     }
+    @PostMapping("/users")
+    public User addUser(@RequestBody User user)
+    {
+        return userRepository.save(user);
+    }
+
 }
-//MODEL - SHAPE, FORMULA - DATA - MVC - Model View Controller - VIEW - REACT - VUE -
-// JSON
+// HTTP REQUEST - ONE OF THE TYPE - GET
+// POST /JSON
+
