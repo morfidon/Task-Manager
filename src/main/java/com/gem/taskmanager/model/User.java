@@ -16,6 +16,8 @@ public class User implements UserDetails
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; // IDentificator - UNIQUE - IDENTIFY
     private String name;
+
+    @Column(unique = true)
     private String email;
     private String password;
 
