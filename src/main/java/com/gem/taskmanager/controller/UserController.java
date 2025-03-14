@@ -3,13 +3,14 @@ package com.gem.taskmanager.controller;
 import com.gem.taskmanager.model.User;
 import com.gem.taskmanager.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("users/")
+@RequestMapping("/users")
 public class UserController
 {
 
@@ -25,9 +26,8 @@ public class UserController
         return userRepository.findAll();
     }
     @PostMapping
-    public User addUser(@RequestBody User user)
-    {
-        return userRepository.save(user);
+    public User addUser(@RequestBody User user) {
+             return userRepository.save(user);
     }
 
 
