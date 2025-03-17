@@ -34,6 +34,13 @@ public class User implements UserDetails
         this.password = password;
     }
 
+    public User(String name, String email, String password, Role role) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
+
     public int getId() {
         return id;
     }
@@ -76,9 +83,4 @@ public class User implements UserDetails
     public void setPassword(String password) {
         this.password = password;
     }
-}
-//JPA - this things give you ADNOTATIONS, HIBERNATE
-enum Role {
-    USER,
-    ADMIN
 }
