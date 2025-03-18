@@ -99,3 +99,12 @@ h1 {
         padding: 1.5rem;
     }
 }
+/* Style for error messages */
+.error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
